@@ -1,0 +1,74 @@
+@import 'variables/color';
+
+header {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    position: fixed;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        width: 1220px;
+        padding: 15px;
+        margin: 0 auto;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 70px;
+        width: auto;
+    }
+
+    .header-button {
+        background-color: $accent-color;
+        color: $primary-color;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    nav {
+        li {
+            display: inline;
+            padding: 20px;
+        }
+    }
+
+    a {
+        color: $text-color;
+    }
+
+    a:hover {
+        color: $accent-color
+    }
+
+    .burger-button {
+        display: none;
+        background-color: $accent-color;
+    }
+
+    .burger-line {
+        background-color: $accent-color;
+        inline-size: 10px;
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+    
+    @include lg {
+        .menu {
+            display: none;
+        }
+    
+        .burger-line {
+            display: block;
+        }
+    
+        .burger-menu {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "variables/font-size";
+@import "variables/font-family";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: $medium-heading;
+    font-weight: normal;
+    font-family: $OpenSans, $san-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+}

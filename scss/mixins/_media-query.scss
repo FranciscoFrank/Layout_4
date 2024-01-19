@@ -1,0 +1,29 @@
+@import 'variables/breack-point';
+
+//For small devices (Mobile)
+@mixin sm {
+    @media only all and (max-width: $screen-sm) {
+        @content;
+    }
+}
+
+//For medium devices (iPad)
+@mixin md {
+    @media only all and (max-width: $screen-md) {
+        @content;
+    }
+}
+
+//For large devices (Tablets, Small screens)
+@mixin lg {
+    @media only all and (max-width: $screen-lg) {
+        @content;
+    }
+}
+
+// Extra Large Devices (Desktops, laptops)
+@mixin xl{
+    @media only screen and (max-width: $screen-xl){
+        @content;
+    }
+}

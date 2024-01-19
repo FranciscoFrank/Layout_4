@@ -1,0 +1,20 @@
+// Mixins
+@import "./mixins/mixins";
+
+// Base
+@import "./base/base"; 
+
+// Components
+@import "./components/components";
+
+//Color
+@import "./variables/color";
+
+//Size
+@import "./variables/breack-point";
+
+//Font family
+@import "./variables/font-family";
+
+//Font size
+@import "./variables/font-size"
