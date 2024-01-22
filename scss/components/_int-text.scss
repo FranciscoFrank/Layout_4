@@ -1,0 +1,20 @@
+@import "abstracts/variables/font-size";
+@import "abstracts/variables/color";
+
+.int-text {
+    width: 50%;
+    text-align: center;
+
+    .title {
+        font-weight: bold;
+        font-size: $large;
+        padding-bottom: 20px;
+    }
+
+    .info {
+        font-size: $accent;
+        padding-left: 23px;
+        padding-right: 23px;
+        color: $text-color;
+    }
+}

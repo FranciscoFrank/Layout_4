@@ -138,3 +138,30 @@ header .burger-menu.active {
     display: block;
   }
 }
+
+.form {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+.form .form-content {
+  width: 1220px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.int-text {
+  width: 50%;
+  text-align: center;
+}
+.int-text .title {
+  font-weight: bold;
+  font-size: 37px;
+  padding-bottom: 20px;
+}
+.int-text .info {
+  font-size: 20px;
+  padding-left: 23px;
+  padding-right: 23px;
+  color: #666666;
+}

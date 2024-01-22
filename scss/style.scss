@@ -1,20 +1,18 @@
-// Mixins
-@import "./mixins/mixins";
+//Abstracts
+@use "./abstracts/mixins/media-query";
+@use "./abstracts/variables/breack-point";
+@use "./abstracts/variables/color";
+@use "./abstracts/variables/font-family";
+@use "./abstracts/variables/font-size";
+
+//Vendors
+@use "./vendors/jquery-ui";
 
 // Base
-@import "./base/base"; 
+@use "./base/base"; 
+
+//Layouts
+@use "./layout/header";
 
 // Components
-@import "./components/components";
-
-//Color
-@import "./variables/color";
-
-//Size
-@import "./variables/breack-point";
-
-//Font family
-@import "./variables/font-family";
-
-//Font size
-@import "./variables/font-size"
+@use "./components/components";

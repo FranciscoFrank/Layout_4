@@ -1,5 +1,5 @@
-@import "variables/font-size";
-@import "variables/font-family";
+@import "abstracts/variables/font-size";
+@import "abstracts/variables/font-family";
 
 *,
 *::before,
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-size: $medium-heading;
+    font-size: $medium;
     font-weight: normal;
     font-family: $OpenSans, $san-serif;
 }
