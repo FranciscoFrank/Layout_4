@@ -7,7 +7,7 @@
     <title>OxIT</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header-content">
             <img src="images/logo_Oxit.png" class="logo" alt="Логотип">
             <div class="menu">
@@ -34,39 +34,49 @@
                     </ul>
                 </nav>
             </div>
-            <button class="burger-button">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </button> 
-            <div class="burger-menu">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#main">Головна</a>
-                        </li>
-                        <li>
-                            <a href="#offers">Програма курсу</a>
-                        </li>
-                        <li>
-                            <a href="#review">Відгуки про курс</a>
-                        </li>
-                        <li>
-                            <a href="#video">Відео</a>
-                        </li>
-                        <li>
-                            <a href="#our-mentors">Ментори</a>
-                        </li>
-                        <li>
-                            <button href="" class="header-button">Подати заявку</a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="wrapper-button">
+                <button class="burger-icon" id="burgerBtn">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
             </div>
+        </div>
+        <div class="burger-menu" id="burgerMenu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#main">Головна</a>
+                    </li>
+                    <li>
+                        <a href="#offers">Програма курсу</a>
+                    </li>
+                    <li>
+                        <a href="#review">Відгуки про курс</a>
+                    </li>
+                    <li>
+                        <a href="#video">Відео</a>
+                    </li>
+                    <li>
+                        <a href="#our-mentors">Ментори</a>
+                    </li>
+                    <li>
+                        <button href="" class="burger-button">Подати заявку</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <div class="form" id="reg-form">
+        <div class="form-content">
+            <div class="int-text">
+                <p>Курси програмування у Луцьку</p>
+                <p>Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ-школа ОхіТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати ІТ-спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.</p>
+            </div>
+            <div class="reg-form">
 
+            </div>
+        </div>
     </div>
     <div class="offers" id="offers">
 
@@ -92,5 +102,6 @@
     <footer>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

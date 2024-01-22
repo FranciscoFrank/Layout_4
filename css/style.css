@@ -35,11 +35,11 @@ button {
 }
 
 header {
-  background-color: white;
+  background-color: #FFFFFF;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
-  position: fixed;
+  border: 0;
 }
 header .header-content {
   display: flex;
@@ -49,6 +49,7 @@ header .header-content {
   margin: 0 auto;
   align-items: center;
   font-size: 16px;
+  z-index: 2;
 }
 header .logo {
   height: 70px;
@@ -58,9 +59,12 @@ header .header-button {
   background-color: #337AB7;
   color: #FFFFFF;
   border-radius: 20px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-header nav li {
+header .menu li {
   display: inline;
   padding: 20px;
 }
@@ -70,25 +74,67 @@ header a {
 header a:hover {
   color: #337AB7;
 }
-header .burger-button {
-  display: none;
+header .wrapper-button {
   background-color: #337AB7;
+  border-radius: 3px;
+  display: none;
+}
+header .burger-icon {
+  background-color: #337AB7;
+  color: #FFFFFF;
+  margin: 5px 10px;
 }
 header .burger-line {
-  background-color: #337AB7;
-  inline-size: 10px;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #FFFFFF;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 header .burger-menu {
-  display: none;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: var(--menu-top, -100%);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: top 0.5s ease;
+  z-index: 1;
+}
+header .burger-menu nav li {
+  padding: 10px;
+}
+header .burger-menu .burger-button {
+  background-color: #337AB7;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+}
+header .burger-menu.active {
+  top: var(--header-height);
 }
 @media only all and (max-width: 1024px) {
   header .menu {
     display: none;
   }
-  header .burger-line {
-    display: block;
+  header .header-content {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  header .burger-menu {
-    display: none;
+  header .logo {
+    height: 60px;
+  }
+  header .wrapper-button {
+    display: block;
   }
 }
