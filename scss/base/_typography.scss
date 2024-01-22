@@ -1,0 +1,7 @@
+@import "abstracts/variables/font-family";
+@import "abstracts/variables/font-size";
+
+html {
+    font-family: $OpenSans, $san-serif;
+    font-size: $main;
+}

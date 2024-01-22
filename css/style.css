@@ -1,37 +1,27 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-body {
-  font-size: 16px;
-  font-weight: normal;
-  font-family: "Open Sans", sans-serif;
-}
-
-ul {
+ul, li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+input, button {
+  border: 0;
+  border-radius: 0;
 }
 
-input,
-textarea {
-  border: none;
-  outline: none;
-}
-
-button {
-  border: none;
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 header {
@@ -41,7 +31,23 @@ header {
   display: flex;
   border: 0;
 }
-header .header-content {
+
+.form {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+
+.offers {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.advantage {
+  width: 100%;
+  background-color: #337AB7;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   width: 1220px;
@@ -51,11 +57,11 @@ header .header-content {
   font-size: 16px;
   z-index: 2;
 }
-header .logo {
+.header-content .logo {
   height: 70px;
   width: auto;
 }
-header .header-button {
+.header-content .header-button {
   background-color: #337AB7;
   color: #FFFFFF;
   border-radius: 20px;
@@ -64,27 +70,27 @@ header .header-button {
   padding-left: 15px;
   padding-right: 15px;
 }
-header .menu li {
+.header-content .menu li {
   display: inline;
   padding: 20px;
 }
-header a {
+.header-content a {
   color: #666666;
 }
-header a:hover {
+.header-content a:hover {
   color: #337AB7;
 }
-header .wrapper-button {
+.header-content .wrapper-button {
   background-color: #337AB7;
   border-radius: 3px;
   display: none;
 }
-header .burger-icon {
+.header-content .burger-icon {
   background-color: #337AB7;
   color: #FFFFFF;
   margin: 5px 10px;
 }
-header .burger-line {
+.header-content .burger-line {
   display: block;
   width: 20px;
   height: 2px;
@@ -92,7 +98,7 @@ header .burger-line {
   margin: 4px 0;
   transition: 0.4s;
 }
-header .burger-menu {
+.header-content .burger-menu {
   background-color: #FFFFFF;
   position: absolute;
   top: var(--menu-top, -100%);
@@ -106,10 +112,10 @@ header .burger-menu {
   transition: top 0.5s ease;
   z-index: 1;
 }
-header .burger-menu nav li {
+.header-content .burger-menu nav li {
   padding: 10px;
 }
-header .burger-menu .burger-button {
+.header-content .burger-menu .burger-button {
   background-color: #337AB7;
   color: #FFFFFF;
   border-radius: 20px;
@@ -119,49 +125,60 @@ header .burger-menu .burger-button {
   padding-right: 15px;
   margin-bottom: 5px;
 }
-header .burger-menu.active {
+.header-content .burger-menu.active {
   top: var(--header-height);
 }
 @media only all and (max-width: 1024px) {
-  header .menu {
+  .header-content .menu {
     display: none;
   }
-  header .header-content {
+  .header-content .header-content {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
   }
-  header .logo {
+  .header-content .logo {
     height: 60px;
   }
-  header .wrapper-button {
+  .header-content .wrapper-button {
     display: block;
   }
 }
 
-.form {
-  width: 100%;
-  background-color: #F7F7F7;
-}
-.form .form-content {
+.form-content {
   width: 1220px;
   padding: 15px;
   margin: 0 auto;
   display: flex;
 }
-
-.int-text {
+.form-content .int-text {
   width: 50%;
   text-align: center;
 }
-.int-text .title {
+.form-content .int-text .title {
   font-weight: bold;
   font-size: 37px;
-  padding-bottom: 20px;
 }
-.int-text .info {
-  font-size: 20px;
-  padding-left: 23px;
-  padding-right: 23px;
+.form-content .int-text .info {
+  font-size: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
   color: #666666;
+}
+.form-content .reg-form {
+  width: 50%;
+  padding-left: 40px;
+  align-items: center;
+}
+.form-content .reg-form img {
+  height: 10px;
+  width: auto;
+  padding-left: 2.5px;
+}
+.form-content .reg-form input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
 }
