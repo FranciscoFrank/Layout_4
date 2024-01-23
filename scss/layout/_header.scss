@@ -6,4 +6,78 @@ header {
     width: 100%;
     display: flex;
     border: 0;
+
+    .logo {
+        height: 70px;
+        width: auto;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1220px;
+        padding: 15px;
+        margin: 0 auto;
+        align-items: center;
+        font-size: 16px;
+        z-index: 2;
+        
+        .menu {
+            li {
+                display: inline;
+                padding: 20px;
+            }
+        }   
+        
+        .header-button {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .wrapper-button {
+            border-radius: 3px;
+            display: none;
+        }
+        
+        .burger-icon {
+            background-color: $accent-color;
+            color: $primary-color;
+            margin: 5px 10px;
+        }
+        
+        .burger-line {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: $primary-color;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+    
+        .burger-menu {
+            display: none;
+        }
+    
+        @include lg {
+            .menu {
+                display: none;
+            }
+    
+            .header-content {
+                padding: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+    
+            .logo {
+                height: 60px;
+            }
+    
+            .wrapper-button {
+                display: block;
+            }
+        }
+    }
 }

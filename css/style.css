@@ -14,6 +14,10 @@ ul, li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 input, button {
   border: 0;
   border-radius: 0;
@@ -24,6 +28,14 @@ html {
   font-size: 16px;
 }
 
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #337AB7;
+}
+
 header {
   background-color: #FFFFFF;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,23 +43,11 @@ header {
   display: flex;
   border: 0;
 }
-
-.form {
-  width: 100%;
-  background-color: #F7F7F7;
+header .logo {
+  height: 70px;
+  width: auto;
 }
-
-.offers {
-  width: 100%;
-  background-color: #FFFFFF;
-}
-
-.advantage {
-  width: 100%;
-  background-color: #337AB7;
-}
-
-.header-content {
+header .wrapper {
   display: flex;
   justify-content: space-between;
   width: 1220px;
@@ -57,40 +57,26 @@ header {
   font-size: 16px;
   z-index: 2;
 }
-.header-content .logo {
-  height: 70px;
-  width: auto;
+header .wrapper .menu li {
+  display: inline;
+  padding: 20px;
 }
-.header-content .header-button {
-  background-color: #337AB7;
-  color: #FFFFFF;
-  border-radius: 20px;
+header .wrapper .header-button {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
 }
-.header-content .menu li {
-  display: inline;
-  padding: 20px;
-}
-.header-content a {
-  color: #666666;
-}
-.header-content a:hover {
-  color: #337AB7;
-}
-.header-content .wrapper-button {
-  background-color: #337AB7;
+header .wrapper .wrapper-button {
   border-radius: 3px;
   display: none;
 }
-.header-content .burger-icon {
+header .wrapper .burger-icon {
   background-color: #337AB7;
   color: #FFFFFF;
   margin: 5px 10px;
 }
-.header-content .burger-line {
+header .wrapper .burger-line {
   display: block;
   width: 20px;
   height: 2px;
@@ -98,87 +84,126 @@ header {
   margin: 4px 0;
   transition: 0.4s;
 }
-.header-content .burger-menu {
-  background-color: #FFFFFF;
-  position: absolute;
-  top: var(--menu-top, -100%);
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: top 0.5s ease;
-  z-index: 1;
-}
-.header-content .burger-menu nav li {
-  padding: 10px;
-}
-.header-content .burger-menu .burger-button {
-  background-color: #337AB7;
-  color: #FFFFFF;
-  border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 5px;
-}
-.header-content .burger-menu.active {
-  top: var(--header-height);
+header .wrapper .burger-menu {
+  display: none;
 }
 @media only all and (max-width: 1024px) {
-  .header-content .menu {
+  header .wrapper .menu {
     display: none;
   }
-  .header-content .header-content {
+  header .wrapper .header-content {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
   }
-  .header-content .logo {
+  header .wrapper .logo {
     height: 60px;
   }
-  .header-content .wrapper-button {
+  header .wrapper .wrapper-button {
     display: block;
   }
 }
 
-.form-content {
+.form {
+  width: 100%;
+  background-color: #F7F7F7;
+  display: flex;
+  border: 0;
+}
+.form .int-text {
+  padding-top: 12%;
+  width: 50%;
+  text-align: center;
+}
+.form .int-text .title {
+  font-weight: bold;
+  font-size: 34px;
+}
+.form .int-text .info {
+  font-size: 18px;
+  line-height: 1.7;
+  padding-left: 51px;
+  padding-right: 51px;
+  color: #666666;
+}
+.form .reg-form {
+  width: 50%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form .reg-form p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 24px;
+}
+.form .reg-form label {
+  text-align: left;
+}
+.form .reg-form img {
+  height: 10px;
+  width: auto;
+  padding-left: 2.5px;
+}
+.form .reg-form input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #666666;
+  padding: 15px;
+}
+.form .reg-form .politics {
+  margin-top: 15px;
+  font-size: 12px;
+  width: 15px;
+  height: auto;
+}
+.form .reg-form a {
+  color: #337AB7;
+}
+.form .reg-form button {
+  font-size: 16px;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 2.5%;
+  margin-top: 5%;
+  display: block;
+}
+
+.offers {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  border: 0;
+}
+
+.advantage {
+  width: 100%;
+  background-color: #337AB7;
+  display: flex;
+  border: 0;
+}
+
+.map iframe {
+  height: 400px;
+  width: 100%;
+  border: none;
+}
+
+.wrapper {
   width: 1220px;
   padding: 15px;
   margin: 0 auto;
   display: flex;
 }
-.form-content .int-text {
-  width: 50%;
-  text-align: center;
-}
-.form-content .int-text .title {
-  font-weight: bold;
-  font-size: 37px;
-}
-.form-content .int-text .info {
-  font-size: 16px;
-  padding-left: 40px;
-  padding-right: 40px;
-  color: #666666;
-}
-.form-content .reg-form {
-  width: 50%;
-  padding-left: 40px;
-  align-items: center;
-}
-.form-content .reg-form img {
-  height: 10px;
-  width: auto;
-  padding-left: 2.5px;
-}
-.form-content .reg-form input {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
+
+button {
+  background-color: #337AB7;
+  border: 0px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 10px;
 }

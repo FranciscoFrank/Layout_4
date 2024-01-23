@@ -1,6 +1,80 @@
-@import "abstracts/variables/color";
+@import "abstracts/abstracts-dir";
 
 .form {
     width: 100%;
     background-color: $second-color;
+    display: flex;
+    border: 0;
+
+    .int-text {
+        padding-top: 12%;
+        width: 50%;
+        text-align: center;
+    
+        .title {
+            font-weight: bold;
+            font-size: 34px;
+        }
+    
+        .info {
+            font-size: 18px;
+            line-height: 1.7;
+            padding-left: 51px;
+            padding-right: 51px;
+            color: $text-color;
+        }
+    }
+
+    .reg-form {
+        width: 50%;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+      
+        p {
+          text-align: left;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      
+        label {
+          text-align: left;
+        }
+      
+        img {
+          height: 10px;
+          width: auto;
+          padding-left: 2.5px;
+        }
+      
+        input {
+          width: 100%;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          height: 45px;
+          border-radius: 5px;
+          border: 1px solid $text-color;
+          padding: 15px;
+        }
+      
+        .politics {
+          margin-top: 15px;
+          font-size: 12px;
+          width: 15px;
+          height: auto;
+        }
+        
+        a {
+          color: $accent-color;
+        }
+      
+        button {
+          font-size: 16px;
+          width: 60%;
+          margin: auto;
+          margin-bottom: 2.5%;
+          margin-top: 5%;
+          display: block;
+        }
+    }      
 }

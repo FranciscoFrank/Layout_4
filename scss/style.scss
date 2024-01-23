@@ -1,19 +1,14 @@
 //Abstracts
-@import "./abstracts/mixins/media-query";
-@import "./abstracts/variables/breack-point";
-@import "./abstracts/variables/color";
-@import "./abstracts/variables/font-family";
-@import "./abstracts/variables/font-size";
+@import "./abstracts/abstracts-dir";
 
 //Vendors
 @import "./vendors/jquery-ui";
 
 // Base
-@import "./base/reset"; 
-@import "./base/typography";
+@import "./base/base-dir";
 
 //Layouts
-@import "./layout/layout";
+@import "./layout/layout-dir";
 
 // Components
-@import "./components/components";
+@import "./components/components-dir";

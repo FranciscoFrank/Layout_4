@@ -1,7 +1,14 @@
-@import "abstracts/variables/font-family";
-@import "abstracts/variables/font-size";
+@import "abstracts/abstracts-dir";
 
 html {
     font-family: $OpenSans, $san-serif;
     font-size: $main;
+}
+
+a {
+    color: $text-color;
+}
+
+a:hover {
+    color: $accent-color;
 }
