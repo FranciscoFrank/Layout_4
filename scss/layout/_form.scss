@@ -4,13 +4,21 @@
     width: 100%;
     background-color: $second-color;
     display: flex;
-    border: 0;
+    height: fit-content;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     .int-text {
-        padding-top: 12%;
-        width: 50%;
-        text-align: center;
-    
+      padding-top: 12%;
+      order: 1;
+      height: auto;
+      width: 50%;
+      text-align: center;
+      box-sizing: border-box;
+
         .title {
             font-weight: bold;
             font-size: 34px;
@@ -19,13 +27,15 @@
         .info {
             font-size: 18px;
             line-height: 1.7;
-            padding-left: 51px;
-            padding-right: 51px;
+            margin-left: 51px;
+            margin-right: 51px;
             color: $text-color;
         }
     }
 
     .reg-form {
+        order: 2;
+        height: auto;
         width: 50%;
         padding-left: 40px;
         display: flex;
@@ -56,12 +66,18 @@
           border: 1px solid $text-color;
           padding: 15px;
         }
+
+        .politic {
+          display: flex;
+          align-items: center;
+        }
       
         .politics {
           margin-top: 15px;
           font-size: 12px;
           width: 15px;
           height: auto;
+          margin-right: 5px;
         }
         
         a {
@@ -76,5 +92,65 @@
           margin-top: 5%;
           display: block;
         }
-    }      
+    }
+
+    @include xl {
+      .form {
+        flex-direction: column;
+      }
+
+      .int-text {
+        width: 75%;
+        order: 1;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .reg-form {
+        order: 2;
+        width: 75%;
+        padding: 0;
+        margin: 0 auto;
+      }
+    }
+
+    @include md {
+      .int-text {
+        .title {
+          font-size: 30px;
+        }
+      }
+
+      .reg-form {
+        p {
+          font-size: 22px;
+        }
+
+        button {
+
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include sm {
+      .int-text {
+        width: 100%;
+        order: 1;
+
+        .title {
+          font-size: 24px;
+        }
+
+        .info {
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+
+      .reg-form {
+        order: 2;
+        width: 100%;
+      }
+    }
 }

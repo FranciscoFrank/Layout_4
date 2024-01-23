@@ -1,14 +1,9 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var burgerBtn = document.getElementById('burgerBtn');
+    var burgerMenu = document.getElementById('burgerMenu');
+    var headerHeight = document.getElementById('header').offsetHeight;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerBtn = document.getElementById('burgerBtn');
-    const burgerMenu = document.getElementById('burgerMenu');
-
-
-    burgerBtn.addEventListener('click', () => {
-        burgerMenu.classList.toggle('active');
+    burgerBtn.addEventListener('click', function () {
+        burgerMenu.classList.toggle('menu-open');
     });
-
-
-    var headerHeight = document.querySelector('header').offsetHeight;
-    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
 });
