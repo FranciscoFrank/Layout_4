@@ -5,8 +5,8 @@ html {
     font-size: $main;
 }
 
-a {
-    color: $text-color;
+a, label, p {
+    color: $primary-text-color;
 }
 
 a:hover {

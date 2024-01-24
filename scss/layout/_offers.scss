@@ -1,8 +1,101 @@
-@import "abstracts/variables/color";
+@import "abstracts/abstracts-dir";
 
 .offers {
     width: 100%;
     background-color: $primary-color;
     display: flex;
     border: 0;
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+
+        p {
+            padding: 0;
+            color: $second-text-color;
+            font-size: 36px;
+        }
+
+        #wrapper-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 55px;
+
+            #wrapper-icons {
+                display: flex;
+                flex-direction: column;
+              
+                p {
+                    color: $primary-text-color;
+                }
+              
+                .offers-title {
+                    font-size: 23px;
+                }
+              
+                hr {
+                    width: 100%;
+                    border: 0;
+                    background-color: $accent-color;
+                    height: 2px;
+                }
+              
+                .offers-dis {
+                    height: 100px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @include xl {
+        .wrapper {
+            .wrapper-content {
+                #wrapper-icons {
+                    margin-left: 25px;
+                    margin-right: 25px;
+
+                    .offers-title {
+                        height: 15px;
+                        font-size: 20px;
+                    }
+            
+                    .offers-dis {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        .wrapper {
+            #wrapper-content {
+                #wrapper-icons {
+                    margin-left: 25px;
+                    margin-right: 25px;
+
+                    .offers-title {
+                        height: 35px;
+                        font-size: 20px;
+                    }
+            
+                    .offers-dis {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-slide {
+        @extend #wrapper-icons; 
+    }
+
+    @include two {
+        #wrapper-content {
+            max-width: 870px;
+        }
+    }
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <title>OxIT</title>
 </head>
 <body>
@@ -74,53 +76,58 @@
                 <p class="info">Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ-школа ОхIТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати ІТ-спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.</p>
             </div>
             <div class="reg-form">
-                <form method="POST">
+                <form method="POST" autocomplete="off">
                     <p>Зареєструватися на курси</p>
-                    <label>Ім'я<img src="images/icons/required.png"></label> <br>
-                    <input type="text" name="FirstName" placeholder="Ім'я" required> <br>
-
-                    <label>Прізвище<img src="images/icons/required.png"></label><br>
-                    <input type="text" name="LastName" placeholder="Прізвище" required> <br>
-
-                    <label>Мене більше цікавить<img src="images/icons/required.png"></label> <br>
-                    <input type="text" name="Interest" placeholder="Developer or QA" required> <br>
-
-                    <label>Номер телефону<img src="images/icons/required.png"></label> <br>
-                    <input type="tel" name="Phone" placeholder="Номер телефону: +38 XXX XX XX XXX" required> <br>
-
-                    <label>Email<img src="images/icons/required.png"></label> <br>
-                    <input type="email" name="Email" placeholder="Email" required> <br>
+                    <label>Ім'я<img src="images/icons/required.png"><br>
+                      <input type="text" name="FirstName" placeholder="Ім'я" pattern="[A-Za-zА-Яа-яЁёІіЇїЄєҐґЙйЬьЮюЇіІєЄґЎў]*" required>
+                    </label><br>
+                  
+                    <label>Прізвище<img src="images/icons/required.png"><br>
+                      <input type="text" name="LastName" placeholder="Прізвище" pattern="[A-Za-zА-Яа-яЁёІіЇїЄєҐґЙйЬьЮюЇіІєЄґЎў]*" required>
+                    </label><br>
+                  
+                    <label>Мене більше цікавить<img src="images/icons/required.png"><br>
+                      <input type="text" name="Interest" placeholder="Developer or QA" pattern="(Developer|QA)" required>
+                    </label><br>
+                  
+                    <label>Номер телефону<img src="images/icons/required.png"><br>
+                      <input type="tel" name="Phone" placeholder="Номер телефону: +38 XXX XX XX XXX" pattern="\+38 ?\d{3} ?\d{2} ?\d{2} ?\d{3}" autocomplete="off" required>
+                    </label><br>
+                  
+                    <label>Email<img src="images/icons/required.png"><br>
+                      <input type="email" name="Email" placeholder="Email" autocomplete="off" required>
+                    </label><br>
                     
-                    <div class="politic">
-                        <input class="politics"  type="checkbox" name="Approve" required>
-                        <label>Я погоджуюся із <a href="#">Політикою Конфіденційності</a><img src="images/icons/required.png"></label> <br>
-                    </div>
-
-                    <button type="submit" class="reg-button">Зареєструватися зараз</button>
-                </form>
+                    <label class="politic"><input type="checkbox" name="Approve" required>
+                    <div class="text">Я погоджуюся із<a href="#">Політикою Конфіденційності</a><img src="images/icons/required.png"></div></label><br>
+                  
+                    <label><button type="submit" class="reg-button">Зареєструватися зараз</button></label>
+                </form>                  
             </div>
         </div>
     </div>
-    <!--<div class="offers" id="offers">
+    <div class="offers" id="offers">
         <div class="wrapper">
-        <p>Курс "Розробка сайтів"</p>
-            <div class="wrapper-offers">
-                <img src="images/icons/course-icon-1.png">
-                <p>Розробка сайтів на WordPress</p>
-                <hr>
-                <p>Курс складається з коротких навчальних відео, на яких ти пізнає основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</p>
-            </div>
-            <div class="wrapper-offers">
-                <img src="images/icons/course-icon-2.png">
-                <p>Розробка сайтів на Drupal 8</p>
-                <hr>
-                <p>Курс складається з коротких навчальних відео, на яких ти пізнає основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</p>
-            </div>
-            <div class="wrapper-offers">
-                <img src="images/icons/course-icon-3.png">
-                <p>Ознайомлення з тестуванням</p>
-                <hr>
-                <p>Курс складається з коротких навчальних відео, на яких ти пізнає основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</p>
+            <p>Курс «Розробка сайтів»</p>
+            <div id="wrapper-content">
+                <div id="wrapper-icons">
+                    <img src="images/icons/course-icon-1.png">
+                    <p class="offers-title">Розробка сайтів на WordPress</p>
+                    <hr>
+                    <p class="offers-dis">Курс складається з коротких навчальних відео, на яких ти пізнає основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</p>
+                </div>
+                <div id="wrapper-icons">
+                    <img src="images/icons/course-icon-2.png">
+                    <p class="offers-title">Розробка сайтів на Drupal 8</p>
+                    <hr>
+                    <p class="offers-dis">Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою, ти пізнаєш секрети основних та додаткових Drupal-модулів (Views, Rules, Panels, Devel, Paragraph та багатьох інших).</p>
+                </div>
+                <div id="wrapper-icons">
+                    <img src="images/icons/course-icon-3.png">
+                    <p class="offers-title">Ознайомлення з тестуванням</p>
+                    <hr>
+                    <p class="offers-dis">Ти дізнаєшся про забезпечення якості в контексті різних моделей розробки ПЗ. Також QA-спеціаліст розкаже про види тестування (функціональне, регресивне, системне, тестування швидкодії тощо).</p>
+                </div>
             </div>
         </div>
     </div>
@@ -148,7 +155,7 @@
             </div>
         </div>
     </div>
-    <div class="review" id="review">
+    <!--<div class="review" id="review">
         <div class="wrapper">
             <p>Що кажуть студенти наших курсів:</p>
             <div class="slide-rewiew">
@@ -232,7 +239,9 @@
             <p>&#169; Copyright 2018-2022 Internet Devels</p>
             <p><a href="#">Умови політики конфіденційності</a></p>
         </div>
-    </footer>
-    <script src="js/script.js"></script>-->
+    </footer>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

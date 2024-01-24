@@ -28,7 +28,7 @@ html {
   font-size: 16px;
 }
 
-a {
+a, label, p {
   color: #666666;
 }
 
@@ -127,6 +127,7 @@ header .wrapper .burger-menu.menu-open {
   box-sizing: border-box;
 }
 .form .int-text .title {
+  color: #000000;
   font-weight: bold;
   font-size: 34px;
 }
@@ -135,7 +136,6 @@ header .wrapper .burger-menu.menu-open {
   line-height: 1.7;
   margin-left: 51px;
   margin-right: 51px;
-  color: #666666;
 }
 .form .reg-form {
   order: 2;
@@ -146,6 +146,7 @@ header .wrapper .burger-menu.menu-open {
   flex-direction: column;
 }
 .form .reg-form p {
+  color: #000000;
   text-align: left;
   font-weight: bold;
   font-size: 24px;
@@ -171,14 +172,15 @@ header .wrapper .burger-menu.menu-open {
   display: flex;
   align-items: center;
 }
-.form .reg-form .politics {
+.form .reg-form .politic input {
   margin-top: 15px;
   font-size: 12px;
-  width: 15px;
-  height: auto;
-  margin-right: 5px;
+  width: auto;
+  height: 18px;
+  margin-right: 10px;
 }
-.form .reg-form a {
+.form .reg-form .politic a {
+  padding-left: 5px;
   color: #337AB7;
 }
 .form .reg-form button {
@@ -241,6 +243,72 @@ header .wrapper .burger-menu.menu-open {
   display: flex;
   border: 0;
 }
+.offers .wrapper {
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+.offers .wrapper p {
+  padding: 0;
+  color: #000000;
+  font-size: 36px;
+}
+.offers .wrapper #wrapper-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 55px;
+}
+.offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content .slick-slide {
+  display: flex;
+  flex-direction: column;
+}
+.offers .wrapper #wrapper-content #wrapper-icons p, .offers .wrapper #wrapper-content .slick-slide p {
+  color: #666666;
+}
+.offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
+  font-size: 23px;
+}
+.offers .wrapper #wrapper-content #wrapper-icons hr, .offers .wrapper #wrapper-content .slick-slide hr {
+  width: 100%;
+  border: 0;
+  background-color: #337AB7;
+  height: 2px;
+}
+.offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
+  height: 100px;
+  font-size: 18px;
+}
+@media only screen and (max-width: 1220px) {
+  .offers .wrapper .wrapper-content #wrapper-icons, .offers .wrapper .wrapper-content .slick-slide {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .offers .wrapper .wrapper-content #wrapper-icons .offers-title, .offers .wrapper .wrapper-content .slick-slide .offers-title {
+    height: 15px;
+    font-size: 20px;
+  }
+  .offers .wrapper .wrapper-content #wrapper-icons .offers-dis, .offers .wrapper .wrapper-content .slick-slide .offers-dis {
+    font-size: 15px;
+  }
+}
+@media only all and (max-width: 1024px) {
+  .offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content .slick-slide {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
+    height: 35px;
+    font-size: 20px;
+  }
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
+    font-size: 15px;
+  }
+}
+@media only all and (max-width: 850px) {
+  .offers #wrapper-content {
+    max-width: 870px;
+  }
+}
 
 .advantage {
   width: 100%;
@@ -260,6 +328,8 @@ header .wrapper .burger-menu.menu-open {
   padding: 15px;
   margin: 0 auto;
   display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 button {
@@ -269,4 +339,13 @@ button {
   color: #FFFFFF;
   border-radius: 20px;
   padding: 10px;
+}
+
+#wrapper-icons, .offers .slick-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 35px;
+  margin-right: 35px;
 }

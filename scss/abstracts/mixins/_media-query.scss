@@ -7,9 +7,23 @@
     }
 }
 
+//For one icons - offers
+@mixin one {
+    @media only all and (max-width: $screen-offer) {
+        @content;
+    }
+}
+
 //For medium devices (iPad)
 @mixin md {
     @media only all and (max-width: $screen-md) {
+        @content;
+    }
+}
+
+//For two icons - offers
+@mixin two {
+    @media only all and (max-width: $screen-offers) {
         @content;
     }
 }
