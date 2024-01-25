@@ -15,50 +15,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const containerSlider = document.querySelector('#wrapper-content');
-    const containerSlide = document.querySelector('.slick-list');
-    const containerWrapper = document.querySelector('.slick-track');
     let isSliderInitialized = false;
 
     const mediaQuery = window.matchMedia('(max-width: 850px)');
-    checkWidth(mediaQuery);
+    const elementCount = containerSlider ? containerSlider.children.length : 0;
 
+    if (elementCount >= 4) {
+        if (containerSlider && !containerSlider.classList.contains('slider')) {
+            containerSlider.classList.add('slider');
+            if (!isSliderInitialized) {
+                initSlider();
+                $(".slider").slick('refresh');
+                console.log("Більше ніж 4 елемента");
+            }
+        }
+    } else {
+        console.log("Менше ніж 4 елемента");
+    }
+    
     mediaQuery.addListener(checkWidth);
 
     function checkWidth(mediaQuery) {
-        const elementCount = containerSlider ? containerSlider.children.length : 0;
-        const elementsCount = containerWrapper ? containerWrapper.querySelectorAll('.slick-slide').length : 0;
-
-        if (elementCount >= 4 || elementsCount >= 4) {
-            if (containerSlider) {
-                containerSlider.classList.add('slider');
-                if (!isSliderInitialized) {
-                    initSlider();
-                }
-                $(".slider").slick('refresh');
-                console.log("Все знову x1")
-            }
-        } else {
+        if (elementCount < 4) {
             if (mediaQuery.matches) {
-                if (containerSlider) {
+                if (containerSlider && !containerSlider.classList.contains('slider')) {
                     containerSlider.classList.add('slider');
                     if (!isSliderInitialized) {
                         initSlider();
+                        console.log("Є слайдер");
+                        $(".slider").slick('refresh');
                     }
-                    $(".slider").slick('refresh');
-                    console.log("Все знову x2")
                 }
             } else {
                 if (containerSlider && containerSlider.classList.contains('slider')) {
                     if (isSliderInitialized) {
                         $('.slider').slick('unslick');
                         isSliderInitialized = false;
-                    };
-                    console.log("Все знову x3")
+                        console.log("Слайдер знищено");
+                    }
                     containerSlider.classList.remove('slider');
                 }
             }
         }
     }
+    
 
     function initSlider() {
         $(".slider").slick({
@@ -81,4 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
         isSliderInitialized = true;
     }
 });
+
 
