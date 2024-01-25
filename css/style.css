@@ -219,7 +219,7 @@ header .wrapper .burger-menu.menu-open {
     font-size: 14px;
   }
 }
-@media only all and (max-width: 425px) {
+@media only all and (max-width: 490px) {
   .form .int-text {
     width: 100%;
     order: 1;
@@ -247,6 +247,7 @@ header .wrapper .burger-menu.menu-open {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
+  overflow: hidden;
 }
 .offers .wrapper p {
   padding: 0;
@@ -254,59 +255,71 @@ header .wrapper .burger-menu.menu-open {
   font-size: 36px;
 }
 .offers .wrapper #wrapper-content {
+  max-width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 55px;
 }
-.offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content .slick-slide {
+.offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content [id^=slick-slide], .offers .wrapper #wrapper-content .slick-slide {
   display: flex;
   flex-direction: column;
 }
-.offers .wrapper #wrapper-content #wrapper-icons p, .offers .wrapper #wrapper-content .slick-slide p {
+.offers .wrapper #wrapper-content #wrapper-icons p, .offers .wrapper #wrapper-content [id^=slick-slide] p, .offers .wrapper #wrapper-content .slick-slide p {
   color: #666666;
 }
-.offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
+.offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
   font-size: 23px;
 }
-.offers .wrapper #wrapper-content #wrapper-icons hr, .offers .wrapper #wrapper-content .slick-slide hr {
+.offers .wrapper #wrapper-content #wrapper-icons hr, .offers .wrapper #wrapper-content [id^=slick-slide] hr, .offers .wrapper #wrapper-content .slick-slide hr {
   width: 100%;
   border: 0;
   background-color: #337AB7;
   height: 2px;
 }
-.offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
+.offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
   height: 100px;
   font-size: 18px;
 }
 @media only screen and (max-width: 1220px) {
-  .offers .wrapper .wrapper-content #wrapper-icons, .offers .wrapper .wrapper-content .slick-slide {
+  .offers .wrapper .wrapper-content #wrapper-icons, .offers .wrapper .wrapper-content [id^=slick-slide], .offers .wrapper .wrapper-content .slick-slide {
     margin-left: 25px;
     margin-right: 25px;
   }
-  .offers .wrapper .wrapper-content #wrapper-icons .offers-title, .offers .wrapper .wrapper-content .slick-slide .offers-title {
+  .offers .wrapper .wrapper-content #wrapper-icons .offers-title, .offers .wrapper .wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper .wrapper-content .slick-slide .offers-title {
     height: 15px;
     font-size: 20px;
   }
-  .offers .wrapper .wrapper-content #wrapper-icons .offers-dis, .offers .wrapper .wrapper-content .slick-slide .offers-dis {
+  .offers .wrapper .wrapper-content #wrapper-icons .offers-dis, .offers .wrapper .wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper .wrapper-content .slick-slide .offers-dis {
     font-size: 15px;
   }
 }
 @media only all and (max-width: 1024px) {
-  .offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content .slick-slide {
+  .offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content [id^=slick-slide], .offers .wrapper #wrapper-content .slick-slide {
     margin-left: 25px;
     margin-right: 25px;
   }
-  .offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
     height: 35px;
     font-size: 20px;
   }
-  .offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
     font-size: 15px;
   }
+}
+.offers .slick-slide {
+  margin-bottom: 40px;
 }
 @media only all and (max-width: 850px) {
   .offers #wrapper-content {
     max-width: 870px;
+  }
+}
+@media only all and (max-width: 600px) {
+  .offers .wrapper p {
+    font-size: 21px;
+  }
+  .offers #wrapper-content {
+    max-width: 620px;
   }
 }
 
@@ -315,6 +328,71 @@ header .wrapper .burger-menu.menu-open {
   background-color: #337AB7;
   display: flex;
   border: 0;
+}
+.advantage .wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.advantage .wrapper .advantage-content {
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.advantage .wrapper .advantage-content img {
+  height: 65px;
+  width: 85px;
+  margin-bottom: 25px;
+}
+.advantage .wrapper .advantage-content p {
+  margin: 0;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+.advantage .wrapper .advantage-content .number {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.advantage .wrapper .advantage-content .des {
+  text-align: center;
+}
+@media only all and (max-width: 600px) {
+  .advantage .wrapper .advantage-content .wrapper-advantage {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage img {
+    height: 55px;
+    width: 75px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage .number {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage .des {
+    white-space: wrap;
+    font-size: 14px;
+  }
+}
+@media only all and (max-width: 490px) {
+  .advantage .wrapper .advantage-content .wrapper-advantage {
+    width: 125px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage img {
+    height: 55px;
+    width: 75px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage .number {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .advantage .wrapper .advantage-content .wrapper-advantage .des {
+    font-size: 12px;
+  }
 }
 
 .map iframe {
@@ -341,11 +419,62 @@ button {
   padding: 10px;
 }
 
-#wrapper-icons, .offers .slick-slide {
+#wrapper-icons, .offers .slick-slide, .offers [id^=slick-slide] {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-left: 35px;
   margin-right: 35px;
+}
+
+@media only all and (max-width: 850px) {
+  .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .slick-track {
+    position: relative;
+    left: 0;
+    margin-bottom: 15px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px !important;
+  }
+}
+.wrapper-advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  margin-left: 45px;
+  margin-right: 45px;
+  width: 200px;
 }

@@ -1,0 +1,11 @@
+@import "./abstracts/abstracts-dir";
+
+.wrapper-advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    margin-left: 45px;
+    margin-right: 45px;
+    width: 200px;
+}
