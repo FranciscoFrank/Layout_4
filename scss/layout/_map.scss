@@ -1,6 +1,9 @@
 .map {
-    iframe {
     height: 400px;
+    max-width: 100%;
+
+    iframe {
+    height: 100%;
     width: 100%;
     border: none;
     }

@@ -1,0 +1,25 @@
+@import "abstracts/abstracts-dir"; 
+
+footer {
+    background-color: $second-color;
+
+    .wrapper {
+        max-width: 100%;
+        text-align: center;
+        flex-direction: column;
+
+        p {
+            margin: 0;
+        }
+
+        .politics {
+            margin-top: 45px;
+            margin-bottom: 15px;
+            color: $accent-color;
+        }
+
+        .link-politics {
+            margin-bottom: 45px;
+        }
+    }
+}

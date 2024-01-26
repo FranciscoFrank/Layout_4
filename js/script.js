@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     burgerBtn.addEventListener('click', () => {
         burgerMenu.classList.toggle('active');
+        console.log("Все працює")
     });
 
 
     var headerHeight = document.querySelector('header').offsetHeight;
-    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+    document.documentElement.style.setProperty('--header-height', headerHeight + 'px', console.log("Все не працює"));
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,3 +98,16 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $('.mentors-slider').slick({
+        dots: true,
+        infinite: false,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        speed: 1500,
+    });
+});

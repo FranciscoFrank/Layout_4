@@ -86,10 +86,23 @@ header .wrapper .burger-line {
   transition: 0.4s;
 }
 header .wrapper .burger-menu {
-  display: none;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: var(--menu-top, -100%);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: top 0.5s ease;
 }
-header .wrapper .burger-menu.menu-open {
-  top: 0;
+header .wrapper .burger-menu nav li {
+  padding: 10px;
+}
+header .wrapper .burger-menu.active {
+  top: var(--header-height);
 }
 @media only all and (max-width: 1024px) {
   header .wrapper .menu {
@@ -617,13 +630,11 @@ header .wrapper .burger-menu.menu-open {
 }
 .video .wrapper .video-container {
   width: 100%;
-  /* Займає всю доступну ширину батьківського контейнера */
   max-width: 1020px;
   height: 0;
-  /* Початково встановлюємо висоту на 0 */
   max-height: 512px;
   padding-bottom: 56.25%;
-  /* Аспектне відношення 16:9 (512 / 1020 * 100) */
+  margin-bottom: 35px;
   position: relative;
   overflow: hidden;
 }
@@ -632,9 +643,7 @@ header .wrapper .burger-menu.menu-open {
   top: 0;
   left: 0;
   width: 100%;
-  /* Займає всю доступну ширину контейнера */
   height: 100%;
-  /* Займає всю доступну висоту контейнера */
 }
 @media only all and (max-width: 600px) {
   .video .wrapper .title-block {
@@ -646,10 +655,106 @@ header .wrapper .burger-menu.menu-open {
   }
 }
 
-.map iframe {
+.mentors {
+  width: 100%;
+}
+.mentors .wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+.mentors .wrapper .mentors-title {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.mentors .wrapper .slide {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mentors .wrapper .slide img {
+  margin-top: -25px;
+  height: 430px;
+  width: auto;
+}
+.mentors .wrapper .slide hr {
+  margin-bottom: 35px;
+}
+.mentors .wrapper .slide .slider-text {
+  margin-left: 85px;
+}
+.mentors .wrapper .slide .slider-text .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #337AB7;
+}
+.mentors .wrapper .slide .slider-text p {
+  font-size: 18px;
+}
+.mentors .wrapper .slick-list {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0px !important;
+}
+
+.map {
   height: 400px;
+  max-width: 100%;
+}
+.map iframe {
+  height: 100%;
   width: 100%;
   border: none;
+}
+
+.our-contact {
+  width: 100%;
+  display: flex;
+  background-color: #337AB7;
+}
+.our-contact .wrapper {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.our-contact .wrapper .wrapper-contact {
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.our-contact .wrapper .wrapper-contact .wrapper-advantage {
+  max-width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.our-contact .wrapper .wrapper-contact .wrapper-advantage p, .our-contact .wrapper .wrapper-contact .wrapper-advantage a {
+  color: #FFFFFF;
+}
+.our-contact .wrapper .wrapper-contact .wrapper-advantage p {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #F7F7F7;
+}
+footer .wrapper {
+  max-width: 100%;
+  text-align: center;
+  flex-direction: column;
+}
+footer .wrapper p {
+  margin: 0;
+}
+footer .wrapper .politics {
+  margin-top: 45px;
+  margin-bottom: 15px;
+  color: #337AB7;
+}
+footer .wrapper .link-politics {
+  margin-bottom: 45px;
 }
 
 .wrapper {

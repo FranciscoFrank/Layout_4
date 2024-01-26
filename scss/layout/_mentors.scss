@@ -1,4 +1,54 @@
+@import "abstracts/abstracts-dir"; 
+
 .mentors {
     width: 100%;
-    
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .mentors-title {
+            font-size: 36px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .slide {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            img {
+                margin-top: -25px;
+                height: 430px;
+                width: auto;
+            }
+
+            hr {
+                margin-bottom: 35px;
+            }
+
+            .slider-text {
+                margin-left: 85px;
+
+                .name {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $accent-color;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+        
+        .slick-list {
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 0px !important;
+        }
+    }
 }

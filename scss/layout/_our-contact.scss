@@ -1,0 +1,34 @@
+@import "abstracts/abstracts-dir"; 
+
+.our-contact {
+    width: 100%;
+    display: flex;
+    background-color: $accent-color;
+
+    .wrapper {
+        max-width: 100%;
+        flex-wrap: wrap;
+
+        .wrapper-contact {
+            align-items: center;
+            display: flex;
+            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .wrapper-advantage {
+                max-width: 100%;
+
+                p, a {
+                    color: $primary-color;
+                }
+
+                p {
+                    font-weight: bold;
+                }
+
+                width: fit-content;
+            }
+        }
+    }
+}
