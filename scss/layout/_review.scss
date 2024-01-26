@@ -1,0 +1,272 @@
+@import "abstracts/abstracts-dir";
+
+.review {
+    display: flex;
+    max-width: 100%;
+
+    .wrapper {
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        .title-review {
+            font-size: 36px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .review-content {
+            max-width: 100%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+
+            p {
+                margin: 0;
+            }
+
+            q {
+                display: flex;
+                quotes: "“" "„";
+                font-size: 100px;
+                margin: 15px;
+                max-width: 75%;
+                color: $primary-text-color;
+            }
+
+            q::before {
+                margin-right: 10px;
+                margin-top: -40px;
+            }
+
+            q::after {
+                margin-top: 30px;
+                margin-left: 10px;
+            }
+
+            .slide-review {
+                margin-bottom: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .text-review {
+                    font-size: 22px;
+                }
+
+                .author {
+                    color: #000000;
+                    font-size: 18px;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                }
+
+                .job {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    @include two {
+        .wrapper {
+            .title-review {
+                color: #000000;
+            }
+
+            .review-content {
+                q {
+                    max-width: 100%;
+                    font-size: 100px;
+                    margin-top: 15px;
+                }
+
+                q::before {
+                    margin-right: 10px;
+                    margin-top: -35px;
+                }
+
+                q::after {
+                    margin-top: 5px;
+                    margin-left: 10px;
+                }
+
+                .slide-review {
+                    margin-bottom: 25px;
+
+                    .slick-track {
+                        max-width: 100%;
+                    }
+
+                    .text-review {
+                        font-size: 18px;
+                    }
+
+                    .author {
+                        font-size: 18px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include one {
+        .wrapper {
+            .title-review {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .review-content {
+                q {
+                    margin: 0;
+                    font-size: 85px;
+                    margin-top: 15px;
+                }
+
+                q::before {
+                    margin-right: 10px;
+                    margin-top: -10px;
+                }
+
+                q::after {
+                    margin-top: 60px;
+                    margin-left: 10px;
+                }
+
+                .slide-review {
+                    .text-review {
+                        font-size: 14px;
+                    }
+
+                    .author {
+                        font-size: 18px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .wrapper {
+            .title-review {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .review-content {
+                q {
+                    margin: 0;
+                    font-size: 65px;
+                    margin-top: 15px;
+                }
+
+                q::before {
+                    margin-right: 10px;
+                    margin-top: -25px;
+                }
+
+                q::after {
+                    margin-top: 10px;
+                    margin-left: 10px;
+                }
+
+                .slide-review {
+                    .text-review {
+                        font-size: 11px;
+                    }
+
+                    .author {
+                        font-size: 14px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include vs {
+        .wrapper {
+            .title-review {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .review-content {
+                q {
+                    margin: 0;
+                    font-size: 65px;
+                    margin-top: 15px;
+                }
+
+                q::before {
+                    margin-right: 10px;
+                    margin-top: -25px;
+                }
+
+                q::after {
+                    margin-top: 15px;
+                    margin-left: 10px;
+                }
+
+                .slide-review {
+                    .text-review {
+                        font-size: 11px;
+                    }
+
+                    .author {
+                        font-size: 14px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include vvs {
+        .wrapper {
+            .title-review {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .review-content {
+                q {
+                    margin: 0;
+                    font-size: 45px;
+                    margin-top: 15px;
+                }
+
+                q::before {
+                    margin-right: 10px;
+                    margin-top: -5px;
+                }
+
+                q::after {
+                    margin-top: 65px;
+                    margin-left: 10px;
+                }
+
+                .slide-review {
+                    .text-review {
+                        font-size: 12px;
+                    }
+
+                    .author {
+                        font-size: 14px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

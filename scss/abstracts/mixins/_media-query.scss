@@ -1,5 +1,19 @@
 @import "abstracts/variables/breack-point";
 
+//For very very small devices (Mobile)
+@mixin vvs {
+    @media only all and (max-width: $screen-vvs) {
+        @content;
+    }
+}
+
+//For very small devices (Mobile)
+@mixin vs {
+    @media only all and (max-width: $screen-vs) {
+        @content;
+    }
+}
+
 //For small devices (Mobile)
 @mixin sm {
     @media only all and (max-width: $screen-sm) {

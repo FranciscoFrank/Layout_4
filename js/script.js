@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     mediaQuery.addListener(checkWidth);
+    console.log(checkWidth(mediaQuery))
 
     function checkWidth(mediaQuery) {
         if (elementCount < 4) {
@@ -59,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-
     function initSlider() {
         $(".slider").slick({
             slidesToShow: 2,
@@ -82,4 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+$(document).ready(function(){
+    $('.review-content').slick({
+        dots: true,
+        infinite: false,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        speed: 1500,
+        fade: true,
+    });
+});
 
