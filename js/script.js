@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var headerHeight = document.querySelector('header').offsetHeight;
     document.body.style.paddingTop = headerHeight + 'px';
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     burgerBtn.addEventListener('click', () => {
         burgerMenu.classList.toggle('active');
-        console.log("Все працює")
     });
 
 

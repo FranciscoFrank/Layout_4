@@ -108,17 +108,49 @@
 
             #left {
                 font-size: 24px;
-                position: absolute;
                 left: 2%;
-                color: $primary-text-color;
             }
 
             #right {
                 font-size: 24px;
-                position: absolute;
-                left: 97%;
-                top: 50%;
-                color: $primary-text-color;
+                left: 89% !important;
+                top: 70% !important;
+            }
+        }
+    }
+
+    @include vs {
+        .review-content {
+            #left {
+                font-size: 24px;
+                left: 2%;
+            }
+
+            #right {
+                font-size: 24px;
+                left: 87% !important;
+                top: 74% !important;
+            }
+        }
+    }
+
+    @include vvs {
+        .review-content {
+            blockquote {
+                .text-review {
+                    font-size: 16px !important;
+                }
+            }
+
+            #left {
+                font-size: 20px !important;
+                left: 9% !important; 
+            }
+
+            #right {
+                font-size: 20px !important;
+                left: 87% !important;
+                top: 74% !important;
             }
         }
     }

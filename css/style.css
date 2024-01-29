@@ -515,16 +515,37 @@ header .wrapper .burger-menu.active {
   }
   .review .review-content #left {
     font-size: 24px;
-    position: absolute;
     left: 2%;
-    color: #666666;
   }
   .review .review-content #right {
     font-size: 24px;
-    position: absolute;
-    left: 97%;
-    top: 50%;
-    color: #666666;
+    left: 89% !important;
+    top: 70% !important;
+  }
+}
+@media only all and (max-width: 390px) {
+  .review .review-content #left {
+    font-size: 24px;
+    left: 2%;
+  }
+  .review .review-content #right {
+    font-size: 24px;
+    left: 87% !important;
+    top: 74% !important;
+  }
+}
+@media only all and (max-width: 350px) {
+  .review .review-content blockquote .text-review {
+    font-size: 16px !important;
+  }
+  .review .review-content #left {
+    font-size: 20px !important;
+    left: 9% !important;
+  }
+  .review .review-content #right {
+    font-size: 20px !important;
+    left: 87% !important;
+    top: 74% !important;
   }
 }
 
