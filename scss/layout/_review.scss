@@ -135,6 +135,10 @@
     }
 
     @include vvs {
+        .title-review {
+            font-size: 28px !important;
+        }
+
         .review-content {
             blockquote {
                 .text-review {

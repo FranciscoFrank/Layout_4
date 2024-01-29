@@ -535,6 +535,9 @@ header .wrapper .burger-menu.active {
   }
 }
 @media only all and (max-width: 350px) {
+  .review .title-review {
+    font-size: 28px !important;
+  }
   .review .review-content blockquote .text-review {
     font-size: 16px !important;
   }

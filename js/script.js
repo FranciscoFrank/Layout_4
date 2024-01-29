@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    
+    Ск
     function initSlider() {
         $(".slider").slick({
             slidesToShow: 2,
