@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var headerHeight = document.querySelector('header').offsetHeight;
+    document.body.style.paddingTop = headerHeight + 'px';
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.getElementById('burgerBtn');
@@ -27,11 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isSliderInitialized) {
                 initSlider();
                 $(".slider").slick('refresh');
-                console.log("Більше ніж 4 елемента");
             }
         }
-    } else {
-        console.log("Менше ніж 4 елемента");
     }
     
     mediaQuery.addListener(checkWidth);
@@ -44,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     containerSlider.classList.add('slider');
                     if (!isSliderInitialized) {
                         initSlider();
-                        console.log("Є слайдер");
                         $(".slider").slick('refresh');
                     }
                 }
@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (isSliderInitialized) {
                         $('.slider').slick('unslick');
                         isSliderInitialized = false;
-                        console.log("Слайдер знищено");
                     }
                     containerSlider.classList.remove('slider');
                 }
             }
         }
     }
+
     
     function initSlider() {
         $(".slider").slick({
@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             initialSlide: 1,
             dots: true,
             infinite: false,
+
             responsive: [
                 {
                     breakpoint: 600,
@@ -79,9 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
         });
 
+
         isSliderInitialized = true;
     }
 });
+
 
 $(document).ready(function(){
     $('.review-content').slick({
@@ -97,6 +100,7 @@ $(document).ready(function(){
         fade: true,
     });
 });
+
 
 $(document).ready(function(){
     $('.mentors-slider').slick({

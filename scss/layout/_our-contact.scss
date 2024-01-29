@@ -8,6 +8,7 @@
     .wrapper {
         max-width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
 
         .wrapper-contact {
             align-items: center;
@@ -15,9 +16,10 @@
             max-width: 100%;
             flex-wrap: wrap;
             justify-content: center;
+            margin: auto;
 
             .wrapper-advantage {
-                max-width: 100%;
+                width: 180px;
 
                 p, a {
                     color: $primary-color;
@@ -26,8 +28,61 @@
                 p {
                     font-weight: bold;
                 }
+            }
+        }
+    }
 
-                width: fit-content;
+    @include two {
+        .wrapper-contact {
+            .wrapper-advantage {
+                width: 150px !important;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                p, a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @include one {
+        .wrapper-contact {
+            .wrapper-advantage {
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 140px !important;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                p, a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @include vvs {
+        .wrapper-contact {
+            .wrapper-advantage {
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 115px !important;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                p, a {
+                    font-size: 10px;
+                }
             }
         }
     }

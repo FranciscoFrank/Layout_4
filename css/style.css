@@ -3,9 +3,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   border: 0;
@@ -39,10 +50,13 @@ a:hover {
 
 header {
   background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
   border: 0;
+  z-index: 9999;
 }
 header .wrapper {
   display: flex;
@@ -52,7 +66,6 @@ header .wrapper {
   margin: 0 auto;
   align-items: center;
   font-size: 16px;
-  z-index: 2;
 }
 header .wrapper .logo {
   height: 70px;
@@ -88,10 +101,11 @@ header .wrapper .burger-line {
 header .wrapper .burger-menu {
   background-color: #FFFFFF;
   position: absolute;
-  top: var(--menu-top, -100%);
+  top: var(--menu-top, -350%);
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
+  left: 0;
   padding: 0;
   border: 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -181,6 +195,13 @@ header .wrapper .burger-menu.active {
   border-radius: 5px;
   border: 1px solid #666666;
   padding: 15px;
+}
+.form .reg-form input:focus {
+  outline: 0;
+}
+.form .reg-form input:focus:invalid {
+  border: solid 1px #337AB7;
+  box-shadow: 0 0 5px #337AB7;
 }
 .form .reg-form .politic {
   display: flex;
@@ -515,7 +536,6 @@ header .wrapper .burger-menu.active {
     margin-top: -10px;
   }
   .review .wrapper .review-content q::after {
-    margin-top: 60px;
     margin-left: 10px;
   }
   .review .wrapper .review-content .slide-review .text-review {
@@ -542,7 +562,6 @@ header .wrapper .burger-menu.active {
     margin-top: -25px;
   }
   .review .wrapper .review-content q::after {
-    margin-top: 10px;
     margin-left: 10px;
   }
   .review .wrapper .review-content .slide-review .text-review {
@@ -593,10 +612,10 @@ header .wrapper .burger-menu.active {
   }
   .review .wrapper .review-content q::before {
     margin-right: 10px;
-    margin-top: -5px;
+    margin-top: -10px;
   }
   .review .wrapper .review-content q::after {
-    margin-top: 65px;
+    margin-top: 80px;
     margin-left: 10px;
   }
   .review .wrapper .review-content .slide-review .text-review {
@@ -659,6 +678,7 @@ header .wrapper .burger-menu.active {
   width: 100%;
 }
 .mentors .wrapper {
+  max-width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -675,8 +695,7 @@ header .wrapper .burger-menu.active {
   margin-right: 10px;
 }
 .mentors .wrapper .slide img {
-  margin-top: -25px;
-  height: 430px;
+  height: 390px;
   width: auto;
 }
 .mentors .wrapper .slide hr {
@@ -698,6 +717,66 @@ header .wrapper .burger-menu.active {
   overflow: hidden;
   padding: 0px !important;
 }
+@media only all and (max-width: 1024px) {
+  .mentors .slide {
+    display: flex;
+    flex-direction: row;
+  }
+  .mentors .slide img {
+    margin-top: 15px !important;
+  }
+  .mentors .slide p {
+    font-size: 17px !important;
+  }
+}
+@media only all and (max-width: 850px) {
+  .mentors .slide {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .mentors .slide img {
+    margin-top: 15px !important;
+  }
+  .mentors .slide hr {
+    margin-bottom: 35px;
+  }
+  .mentors .slide .slider-text {
+    margin-left: 0px !important;
+  }
+  .mentors .slide .slider-text .name {
+    font-size: 18px !important;
+  }
+  .mentors .slide .slider-text p {
+    font-size: 16px !important;
+  }
+}
+@media only all and (max-width: 600px) {
+  .mentors .slide {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .mentors .slide img {
+    width: 250px !important;
+    height: 270px !important;
+    margin-top: 15px !important;
+  }
+  .mentors .slide hr {
+    margin-bottom: 35px;
+  }
+  .mentors .slide .slider-text {
+    margin-left: 0px !important;
+  }
+  .mentors .slide .slider-text .name {
+    font-size: 16px !important;
+  }
+  .mentors .slide .slider-text p {
+    font-size: 14px !important;
+  }
+}
 
 .map {
   height: 400px;
@@ -717,6 +796,7 @@ header .wrapper .burger-menu.active {
 .our-contact .wrapper {
   max-width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .our-contact .wrapper .wrapper-contact {
   align-items: center;
@@ -724,17 +804,56 @@ header .wrapper .burger-menu.active {
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
 }
 .our-contact .wrapper .wrapper-contact .wrapper-advantage {
-  max-width: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 180px;
 }
 .our-contact .wrapper .wrapper-contact .wrapper-advantage p, .our-contact .wrapper .wrapper-contact .wrapper-advantage a {
   color: #FFFFFF;
 }
 .our-contact .wrapper .wrapper-contact .wrapper-advantage p {
   font-weight: bold;
+}
+@media only all and (max-width: 850px) {
+  .our-contact .wrapper-contact .wrapper-advantage {
+    width: 150px !important;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage img {
+    width: 35px;
+    height: 35px;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage p, .our-contact .wrapper-contact .wrapper-advantage a {
+    font-size: 12px;
+  }
+}
+@media only all and (max-width: 600px) {
+  .our-contact .wrapper-contact .wrapper-advantage {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 140px !important;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage img {
+    width: 35px;
+    height: 35px;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage p, .our-contact .wrapper-contact .wrapper-advantage a {
+    font-size: 12px;
+  }
+}
+@media only all and (max-width: 350px) {
+  .our-contact .wrapper-contact .wrapper-advantage {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 115px !important;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage img {
+    width: 30px;
+    height: 30px;
+  }
+  .our-contact .wrapper-contact .wrapper-advantage p, .our-contact .wrapper-contact .wrapper-advantage a {
+    font-size: 10px;
+  }
 }
 
 footer {
@@ -863,7 +982,7 @@ button {
   }
 
   .slick-dots li button:before {
-    font-size: 8px !important;
+    font-size: 12px !important;
   }
 }
 .wrapper-advantage {
