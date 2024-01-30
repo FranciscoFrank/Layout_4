@@ -218,11 +218,8 @@ header .wrapper .burger-menu.active {
   padding-left: 5px;
   color: #337AB7;
 }
-.form .reg-form .submit-button {
-  display: flex;
-  justify-content: center;
-}
-.form .reg-form .submit-button button {
+.form .reg-form button {
+  margin: 0 auto;
   font-size: 14px;
   width: 60%;
   border-radius: 35px;
