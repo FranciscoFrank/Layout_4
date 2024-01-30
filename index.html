@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,7 +80,7 @@
                     <p class="info">Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ-школа ОхIТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати ІТ-спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.</p>
                 </div>
                 <div class="reg-form" id="registration-form">
-                    <form method="POST" autocomplete="off">
+                    <form method="POST" autocomplete="off" id="myForm">
                         <p>Зареєструватися на курси</p>
                         <label>Ім'я<img src="images/icons/required.png"><br>
                         <input type="text" name="FirstName" placeholder="Ім'я" pattern="[A-Za-zА-Яа-яЁёІіЇїЄєҐґЙйЬьЮюЇіІєЄґЎў]*" required>
@@ -106,7 +106,9 @@
                         <div class="text">Я погоджуюся із<a href="#">Політикою Конфіденційності</a><img src="images/icons/required.png"></div></label><br>
                     
                         <label><button type="submit" class="reg-button">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button></label>
-                    </form>                  
+                    </form> 
+                    <div id="message" class="hidden">Форму відправлено!</div>                 
+                    <div class="overlay" id="overlay"></div>
                 </div>
             </div>
         </div>

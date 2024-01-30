@@ -69,12 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
     //Activating the slider
     function initSlider() {
         $(".slider").slick({
+            dots: true,
+            infinite: true,
             slidesToShow: 2,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000, 
             centerMode: false,
-            initialSlide: 1,
-            dots: true,
-            infinite: false,
 
             //If the width is less than 600, display one slide
             responsive: [
@@ -111,7 +112,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.mentors-slider').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -119,5 +120,23 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 10000,
         speed: 1500,
+    });
+});
+
+//Script to notifying about successful form filling
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var message = document.getElementById("message");
+        var overlay = document.getElementById("overlay"); // Змінено ідентифікатор на "overlay"
+        message.classList.remove("hidden");
+        overlay.style.display = "block"; 
+
+        //Disapperance of a message
+        setTimeout(function() {
+            message.classList.add("hidden");
+            overlay.style.display = "none"; 
+        }, 3000); 
+        this.reset(); 
     });
 });
