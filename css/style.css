@@ -611,7 +611,7 @@ header .wrapper .burger-menu.active {
   max-width: 1020px;
   height: 0;
   max-height: 512px;
-  min-height: 220px;
+  min-height: 200px;
   padding-bottom: 40%;
   margin-bottom: 35px;
   position: relative;
