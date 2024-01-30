@@ -1,8 +1,21 @@
 //Script for site height
 document.addEventListener('DOMContentLoaded', function() {
-    var headerHeight = document.querySelector('header').offsetHeight;
-    document.body.style.paddingTop = headerHeight + 'px';
+    const header = document.querySelector('header');
+    const body = document.body;
+
+    //Function of updating the header height
+    function updateHeaderHeight() {
+        const headerHeight = header.offsetHeight;
+        body.style.paddingTop = headerHeight + 'px';
+    }
+
+    //Calling a function when a hage is loaded
+    updateHeaderHeight();
+
+    //Calling a function when resizing a window
+    window.addEventListener('resize', updateHeaderHeight);
 });
+
 
 //Script for the burger menu
 document.addEventListener('DOMContentLoaded', function() {
@@ -70,11 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function initSlider() {
         $(".slider").slick({
             dots: true,
-            infinite: true,
+            infinite: false,
             slidesToShow: 2,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000, 
+            initSlider: 0,
             centerMode: false,
 
             //If the width is less than 600, display one slide
@@ -112,7 +124,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.mentors-slider').slick({
         dots: true,
-        infinite: true,
+        infinite: false,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
