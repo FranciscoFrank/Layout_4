@@ -218,14 +218,16 @@ header .wrapper .burger-menu.active {
   padding-left: 5px;
   color: #337AB7;
 }
-.form .reg-form button {
+.form .reg-form .submit-button {
+  display: flex;
+  justify-content: center;
+}
+.form .reg-form .submit-button button {
   font-size: 14px;
   width: 60%;
-  margin: auto;
   border-radius: 35px;
   padding: 15px;
   margin-bottom: 2.5%;
-  margin-top: 5%;
   display: block;
 }
 .form .reg-form .hidden {
@@ -853,6 +855,11 @@ button {
   color: #FFFFFF;
   border-radius: 20px;
   padding: 10px;
+}
+
+button:hover {
+  background-color: #285f8f;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #wrapper-icons, .offers .slick-slide, .offers [id^=slick-slide] {
