@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "cssFx": "github:imsky/cssfx"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
