@@ -49,6 +49,12 @@
     }
 }
 
+@mixin ef {
+    @media only all and (max-width: $ef) {
+        @content;
+    }
+}
+
 // Extra Large Devices (Desktops, laptops)
 @mixin xl{
     @media only screen and (max-width: $screen-xl){

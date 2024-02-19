@@ -16,6 +16,26 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateHeaderHeight);
 });
 
+//Function for normal link navigation 
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('a[href^="#"]');
+
+    //Function for smooth scrolling on link click
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var targetId = this.getAttribute('href').slice(1);
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                var headerHeight = document.querySelector('header').offsetHeight;
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight,
+                    behavior: 'smooth' 
+                });
+            }
+        });
+    });
+});
 
 //Script for the burger menu
 document.addEventListener('DOMContentLoaded', function() {
@@ -29,7 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Determining the height of the site
     var headerHeight = document.querySelector('header').offsetHeight;
-    document.documentElement.style.setProperty('--header-height', headerHeight + 'px', console.log("Все не працює"));
+    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+
+    // Close burger menu after link click
+    var links = document.querySelectorAll('#burgerMenu .burgerLink');
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+        });
+    });
 });
 
 //Script for a slider with "website development"
@@ -82,12 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     //Activating the slider
     function initSlider() {
         $(".slider").slick({
-            dots: true,
-            infinite: false,
             slidesToShow: 2,
             slidesToScroll: 1,
-            initSlider: 0,
-            centerMode: false,
+            infinite: true,
+            autoplay: false,
+            arrows: false,
+            dots: true,
+            pauseOnHover: true,
 
             //If the width is less than 600, display one slide
             responsive: [
@@ -108,11 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
 $(document).ready(function(){
     $('.review-content').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        pauseOnHover: true,
         autoplay: true,
         autoplaySpeed: 10000,
         speed: 1500,
@@ -124,12 +154,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.mentors-slider').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
+        pauseOnHover: true,
         autoplaySpeed: 10000,
         speed: 1500,
     });
@@ -140,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("myForm").addEventListener("submit", function(event) {
         event.preventDefault();
         var message = document.getElementById("message");
-        var overlay = document.getElementById("overlay"); // Змінено ідентифікатор на "overlay"
+        var overlay = document.getElementById("overlay");
         message.classList.remove("hidden");
         overlay.style.display = "block"; 
 

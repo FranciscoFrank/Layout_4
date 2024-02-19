@@ -1,7 +1,7 @@
 @import "abstracts/abstracts-dir";
 
-html {
-    font-family: $OpenSans, $san-serif;
+body {
+    font-family: $OpenSans, $ss !important;
     font-size: $main;
 }
 

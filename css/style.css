@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -35,8 +48,8 @@ input, button {
   border-radius: 0;
 }
 
-html {
-  font-family: "Open Sans", sans-serif;
+body {
+  font-family: "Open Sans", sans-serif !important;
   font-size: 16px;
 }
 
@@ -46,6 +59,10 @@ a, label, p {
 
 a:hover {
   color: #337AB7;
+}
+
+#header-height {
+  width: 100%;
 }
 
 header {
@@ -74,12 +91,6 @@ header .wrapper .logo {
 header .wrapper .menu li {
   display: inline;
   padding: 20px;
-}
-header .wrapper .header-button {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 header .wrapper .wrapper-button {
   display: none;
@@ -118,6 +129,19 @@ header .wrapper .burger-menu nav li {
 header .wrapper .burger-menu.active {
   top: var(--header-height);
 }
+header .wrapper #form-link {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 25px;
+  border: none;
+  background-color: #337AB7;
+}
+header .wrapper #form-link:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 @media only all and (max-width: 1024px) {
   header .wrapper .menu {
     display: none;
@@ -147,7 +171,7 @@ header .wrapper .burger-menu.active {
   flex-wrap: wrap;
 }
 .form .int-text {
-  padding-top: 12%;
+  padding-top: 140px;
   order: 1;
   height: auto;
   width: 50%;
@@ -261,7 +285,7 @@ header .wrapper .burger-menu.active {
     flex-direction: column;
   }
   .form .int-text {
-    width: 75%;
+    width: 100% !important;
     order: 1;
     padding: 0;
     margin: 0 auto;
@@ -336,7 +360,7 @@ header .wrapper .burger-menu.active {
   color: #666666;
 }
 .offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
-  font-size: 23px;
+  font-size: 22px;
 }
 .offers .wrapper #wrapper-content #wrapper-icons hr, .offers .wrapper #wrapper-content [id^=slick-slide] hr, .offers .wrapper #wrapper-content .slick-slide hr {
   width: 100%;
@@ -345,23 +369,10 @@ header .wrapper .burger-menu.active {
   height: 2px;
 }
 .offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
-  height: 100px;
+  height: 120px;
   font-size: 18px;
 }
-@media only screen and (max-width: 1220px) {
-  .offers .wrapper .wrapper-content #wrapper-icons, .offers .wrapper .wrapper-content [id^=slick-slide], .offers .wrapper .wrapper-content .slick-slide {
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  .offers .wrapper .wrapper-content #wrapper-icons .offers-title, .offers .wrapper .wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper .wrapper-content .slick-slide .offers-title {
-    height: 15px;
-    font-size: 20px;
-  }
-  .offers .wrapper .wrapper-content #wrapper-icons .offers-dis, .offers .wrapper .wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper .wrapper-content .slick-slide .offers-dis {
-    font-size: 15px;
-  }
-}
-@media only all and (max-width: 1024px) {
+@media only all and (max-width: 1215px) {
   .offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content [id^=slick-slide], .offers .wrapper #wrapper-content .slick-slide {
     margin-left: 25px;
     margin-right: 25px;
@@ -374,19 +385,31 @@ header .wrapper .burger-menu.active {
     font-size: 15px;
   }
 }
+@media only all and (max-width: 1024px) {
+  .offers .wrapper #wrapper-content #wrapper-icons, .offers .wrapper #wrapper-content [id^=slick-slide], .offers .wrapper #wrapper-content .slick-slide {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-title, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-title, .offers .wrapper #wrapper-content .slick-slide .offers-title {
+    font-size: 20px;
+  }
+  .offers .wrapper #wrapper-content #wrapper-icons .offers-dis, .offers .wrapper #wrapper-content [id^=slick-slide] .offers-dis, .offers .wrapper #wrapper-content .slick-slide .offers-dis {
+    font-size: 15px;
+  }
+}
 .offers .slick-slide {
   margin-bottom: 40px;
 }
 @media only all and (max-width: 850px) {
   .offers #wrapper-content {
-    max-width: 870px;
+    width: 100%;
   }
 }
 @media only all and (max-width: 600px) {
   .offers .wrapper p {
     font-size: 21px;
   }
-  .offers #wrapper-content {
+  .offers .wrapper #wrapper-content {
     max-width: 620px;
   }
 }
@@ -440,7 +463,7 @@ header .wrapper .burger-menu.active {
     margin-bottom: 10px;
   }
   .advantage .wrapper .advantage-content .wrapper-advantage .des {
-    white-space: wrap;
+    white-space: pre-wrap;
     font-size: 14px;
   }
 }
@@ -786,34 +809,6 @@ header .wrapper .burger-menu.active {
     font-size: 12px;
   }
 }
-@media only all and (max-width: 600px) {
-  .our-contact .wrapper-contact .wrapper-advantage {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 140px !important;
-  }
-  .our-contact .wrapper-contact .wrapper-advantage img {
-    width: 35px;
-    height: 35px;
-  }
-  .our-contact .wrapper-contact .wrapper-advantage p, .our-contact .wrapper-contact .wrapper-advantage a {
-    font-size: 12px;
-  }
-}
-@media only all and (max-width: 350px) {
-  .our-contact .wrapper-contact .wrapper-advantage {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 115px !important;
-  }
-  .our-contact .wrapper-contact .wrapper-advantage img {
-    width: 30px;
-    height: 30px;
-  }
-  .our-contact .wrapper-contact .wrapper-advantage p, .our-contact .wrapper-contact .wrapper-advantage a {
-    font-size: 10px;
-  }
-}
 
 footer {
   background-color: #F7F7F7;
@@ -878,74 +873,11 @@ button:hover {
   max-width: 100%;
 }
 
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  margin-bottom: 15px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s ease;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
 .slick-dots li button:before {
   font-size: 8px !important;
 }
 
 @media only all and (max-width: 850px) {
-  .slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-
-  .slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-  }
-
-  .slick-track {
-    position: relative;
-    left: 0;
-    margin-bottom: 15px;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease;
-  }
-
-  .slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-  }
-
   .slick-dots li button:before {
     font-size: 12px !important;
   }
@@ -954,6 +886,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 14px;
   margin: 15px;
   margin-left: 45px;
   margin-right: 45px;

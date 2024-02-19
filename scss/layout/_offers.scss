@@ -33,7 +33,7 @@
                 }
               
                 .offers-title {
-                    font-size: 23px;
+                    font-size: $x-large;
                 }
               
                 hr {
@@ -44,22 +44,22 @@
                 }
               
                 .offers-dis {
-                    height: 100px;
+                    height: 120px;
                     font-size: 18px;
                 }
             }
         }
     }
 
-    @include xl {
+    @include ef {
         .wrapper {
-            .wrapper-content {
+            #wrapper-content {
                 #wrapper-icons {
                     margin-left: 25px;
                     margin-right: 25px;
 
                     .offers-title {
-                        height: 15px;
+                        height: 35px;
                         font-size: 20px;
                     }
             
@@ -79,7 +79,6 @@
                     margin-right: 25px;
 
                     .offers-title {
-                        height: 35px;
                         font-size: 20px;
                     }
             
@@ -102,7 +101,7 @@
     
     @include two {
         #wrapper-content {
-            max-width: 870px;
+            width: 100%;
         }
     }
 
@@ -111,10 +110,10 @@
             p {
                 font-size: 21px;
             }
-        }
 
-        #wrapper-content {
-            max-width: 620px;
+            #wrapper-content {
+                max-width: 620px;
+            }
         }
     }
 }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>OxIT</title>
 </head>
 <body>
+    <div id="top"></div>
     <header id="header">
         <div class="wrapper">
             <a href="#">
@@ -19,7 +20,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#main">Головна</a>
+                            <a href="#top">Головна</a>
                         </li>
                         <li>
                             <a href="#offers">Програма курсу</a>
@@ -34,7 +35,7 @@
                             <a href="#our-mentors">Ментори</a>
                         </li>
                         <li>
-                            <button class="header-button" onclick="document.getElementById('form').scrollIntoView();">Подати заявку</button>
+                            <a href="#form" class="burgerLink" id="form-link">Подати заявку</a>
                         </li>                        
                     </ul>
                 </nav>
@@ -50,22 +51,22 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#main">Головна</a>
+                            <a href="#top" class="burgerLink">Головна</a>
                         </li>
                         <li>
-                            <a href="#offers">Програма курсу</a>
+                            <a href="#offers" class="burgerLink">Програма курсу</a>
                         </li>
                         <li>
-                            <a href="#review">Відгуки про курс</a>
+                            <a href="#review" class="burgerLink">Відгуки про курс</a>
                         </li>
                         <li>
-                            <a href="#video">Відео</a>
+                            <a href="#video" class="burgerLink">Відео</a>
                         </li>
                         <li>
-                            <a href="#our-mentors">Ментори</a>
+                            <a href="#our-mentors" class="burgerLink">Ментори</a>
                         </li>
                         <li>
-                            <button class="header-button" onclick="document.getElementById('form').scrollIntoView();">Подати заявку</button>
+                            <a href="#form" class="burgerLink" id="form-link">Подати заявку</a>
                         </li> 
                     </ul>
                 </nav>
@@ -282,9 +283,8 @@
             <p class="link-politics"><a href="#">Умови політики конфіденційності</a></p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="./js/cssfx.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
